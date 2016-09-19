@@ -1,0 +1,546 @@
+body {
+    /*font-family: 'Indie Flower', cursive;*/
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:active {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover, a:active, a:focus {
+    color: #f17b2b;
+    text-decoration: none;
+    outline: 0;
+}
+
+.talc {
+    text-align: center;   
+}    
+
+#homeslider {
+    position: relative;
+    background: #f7f7f7 url("../img/sm_background_proximite_01.jpg") no-repeat 0 0 fixed;
+    background-size:cover;
+
+
+    width: 100%;
+    height: 100%;
+    z-index:-10;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 166px;
+    padding-top: 30px;
+    z-index: 50;
+
+}
+
+#logo {
+
+    margin-left: 0;
+}
+
+
+.header_icons {
+    text-align: center;
+    font-size: 14px;
+}
+
+.header_icons img {
+    margin: auto;
+    display: block;
+    margin-bottom: -5px;
+}
+
+#search_bar input {
+    background: #fff none repeat scroll 0 0;
+    height: 42px;
+    font-size: 22px;
+    width: 100%;
+
+}
+
+/*Styles du panneau de conenction*/
+
+.connect {
+    background-color: white;
+    height: 150px;
+    border-radius: 0 0 10px 10px;
+    color: black;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.connect a {
+    color: black;
+}
+
+.login_input, .login_password {
+    width: 90px;
+    margin: 5px 0;
+    
+}
+
+
+
+.login_input, .login_password, .login, .password, .login_submit, .register {
+ 
+}
+
+
+#slogan {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+
+.menu_scroll {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 166px;
+    background-color: aqua;
+    display: none;
+    z-index: 100;
+    padding-top: 30px;
+    top: 0;
+    left: 0;
+    right:0;
+    vertical-align: middle;
+
+}
+
+/*.fixed {
+    position: fixed;
+    top: 0;
+}*/
+
+
+#label {
+    position:absolute;
+    margin-right: -180px;
+    margin-top: -174px;
+    top: 50%;
+    right: 50%;
+}
+
+#label ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+#label li {
+    width: 360px;  /* Width Image */
+    height: 348px; /* Height Image */
+    position: absolute;
+    right: -360px; /* Original Position - Outside of the Slider */
+    list-style: none;
+}
+
+#label li.firstanimation {
+    -moz-animation: cycle 9s linear infinite;
+    animation: cycle 9s linear infinite;
+}
+
+#label li.secondanimation {
+    -moz-animation: cycletwo 9s linear infinite;
+    animation: cycletwo 9s linear infinite;
+
+}
+
+#label li.thirdanimation {
+    -moz-animation: cyclethree 9s linear infinite;
+    animation: cyclethree 9s linear infinite;
+}
+
+
+
+@keyframes cycle {
+    0%  { right: 0px; } /* When you start the slide, the first image is already visible */
+    4%  { right: 0px; } /* Original Position */
+    16% { right: 0px; opacity:1; z-index:0; } /* From 4% to 16 % = for 3 seconds the image is visible */
+    20% { right: 360px; opacity: 0; z-index: 0; } /* From 16% to 20% = for 1 second exit image */
+    21% { right: -360px; opacity: 0; z-index: -1; } /* Return to Original Position */
+    92% { right: -360px; opacity: 0; z-index: 0; }
+    96% { right: -360px; opacity: 0; } /* From 96% to 100% = for 1 second enter image*/
+    100%{ right: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+    0%  { right: -360px; opacity: 0; } /* Original Position */
+    16% { right: -360px; opacity: 0; }/* Starts moving after 16% to this position */
+    20% { right: 0px; opacity: 1; }
+    24% { right: 0px; opacity: 1; }  /* From 20% to 24% = for 1 second enter image*/
+    36% { right: 0px; opacity: 1; z-index: 0; }   /* From 24% to 36 % = for 3 seconds the image is visible */
+    40% { right: 360px; opacity: 0; z-index: 0; } /* From 36% to 40% = for 1 second exit image */
+    41% { right: -360px; opacity: 0; z-index: -1; }   /* Return to Original Position */
+    100%{ right: -360px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+    0%  { right: -360px; opacity: 0; }
+    36% { right: -360px; opacity: 0; }
+    40% { right: 0px; opacity: 1; }
+    44% { right: 0px; opacity: 1; }
+    56% { right: 0px; opacity: 1; }
+    60% { right: 360px; opacity: 0; z-index: 0; }
+    61% { right: -360px; opacity: 0; z-index: -1; }
+    100%{ right: -360px; opacity: 0; z-index: -1; }
+}
+
+
+
+
+
+
+#courses_container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 75px;
+    z-index: 10;
+
+}
+
+#je_fais_mes_courses {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    border: solid 3px #fff;
+    color: white;
+    font-family: "helvetica",helvetica, arial, sans-serif;
+    font-size:24px;
+    font-weight: 600;
+    padding: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+
+}
+
+
+
+
+#je_fais_mes_courses:hover{
+    border: solid 3px #f17b2b;
+    background: #f17b2b;
+    color: white;
+}
+
+#je_fais_mes_courses a:hover, #je_fais_mes_courses a:active, #je_fais_mes_courses a:visited, #je_fais_mes_courses a:focus {
+    color: #fff;
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+
+.arrow {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 19px;
+    background-image: url("../img/down_arrow.png");
+    background-size: contain;
+    z-index: 0;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+
+/*#panier {
+    width: 280px;
+    position: fixed;
+    top: 166px;
+    right: 0px;
+    background: #ff0;
+    margin-right: -200px;
+    height: 100px;
+}*/
+
+#panier {
+    width: 300px;
+    height: 70px;
+    background-color: #ff0;
+    position: fixed;
+    right: -230px;
+    top: 166px;
+    z-index: 2000;
+}
+#panier_ico {
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    float: left;
+    padding-top: 5px;
+    text-align: center;
+}
+#panier_content {
+    width: 200px;
+    height: 200px;
+    background-color: #f7f7f7;
+    float: left;
+    color: #070707;
+    text-align: center;
+}
+
+
+
+
+/*#wrapper_spacer {
+    position : relative;
+    height: 100vh;
+    width: 100%;
+    z-index: -100;
+}*/
+
+#wrapper {
+    position: relative;
+
+    height: auto;
+    width: 100%;
+}
+
+#wrapper:before { 
+    display: block; 
+    content: " "; 
+    margin-top: -166px; 
+    height: 166px; 
+    visibility: hidden; 
+}
+
+
+#page_produits {
+    position: relative;
+    top:100%;
+    display: block;
+    /*height: 1931px;*/
+    width: 100%;
+    background: #f7f7f7;
+    color: #000;
+    text-align: center;
+}
+
+#produits {
+    background: #f0f0f0 url("../img/pw_pattern.png") 0 0 repeat;
+    width:100%;
+}
+
+.page_title, .page_title img, .page_title h2 {
+    margin: auto;
+    display: inline-block;
+}
+
+.page_title h2 {
+    vertical-align: bottom;
+    margin-bottom: 5px;
+}
+
+#produits ul li, .grid_list ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+#produits ul li p {
+    color: #000;
+    font-size: 14px;
+}
+
+#container {
+    width: 947px;
+    margin: auto;
+}
+
+.grid_list {
+    width: 100%;
+    height:25px;
+
+}
+
+.grid_list ul li {
+    float: left;
+} 
+
+
+
+/* Style des articles /Posts  */
+
+article {
+    width: 100%;
+    height: auto;
+    background: #f6f6f6 url("../img/halftone.png") 0 0 repeat;
+    margin-top: 20px;
+}
+
+.tal {
+    text-align: center;
+}
+
+.fl {
+    float: left;
+}
+
+.image_produit {
+
+}
+
+.nom_produit {
+    font-size: 30px;
+}
+
+.price, .quantite {
+   font-size: 22px;
+}
+
+/*.right_price {
+    position: absolute;
+    top: 100px;
+    right: 0;
+}*/
+
+.panier {
+    margin-top: 50px;
+}
+
+.ajouter_panier {
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.origine {
+    margin: auto;
+    margin-top: 75px;
+}
+
+.nom_producteur {
+    font-size: 30px; 
+}
+
+.photo_producteur {
+   /* float: right;*/
+}
+
+.separator_produit {
+    margin: auto;
+    display: block;
+}
+
+
+
+
+footer {
+    position: relative;
+    background: #f7f7f7 url("../img/dark_embroidery_pattern.png")0 0 repeat scroll;
+    height: 520px;
+    width: 100%;
+    font-size: 22px;
+    z-index: 50;
+}
+
+#copy {
+    position: absolute;
+    bottom: 65px;
+    left: -20px;
+    color: #f7f7f7;
+    font-size: 22px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    writing-mode: lr-tb;
+}
+
+#infos_pratiques {
+    text-align:center;
+}
+
+footer iframe {
+    position: relative;
+    display: block;
+    margin: 25px auto;
+
+}
+
+#back_to_top {
+    margin-top: 25px;
+}
+
+#back_to_top:hover {
+    color: #f17b2b;
+} 
+
