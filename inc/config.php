@@ -10,7 +10,7 @@ define("_DB_PASS", "toto");
 define("_DB_NAME", "speedymarket_php");
 
 //Variable de nom du cookie
-define("_COOKIE_NAME", "sm_token");
+define("_COOKIE_NAME", "sm_token_test");
 //Variable de durée de validitée du cookie
 define("_COOKIE_TIME", time() + 60 * 60 * 24 * 7); //ici 1 semaine ou 604 800 secondes
 
