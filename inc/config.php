@@ -1,7 +1,7 @@
 <?php
 
 //Variable d'adresse du site
-$http = "http://localhost:8080/SM_Salaberria/";
+$http = "http://localhost:8080/SM_PHP_4CODOS/";
 
 //Variables de la base de données
 define("_DB_HOST", "localhost");
@@ -10,7 +10,7 @@ define("_DB_PASS", "toto");
 define("_DB_NAME", "speedymarket_php");
 
 //Variable de nom du cookie
-define("_COOKIE_NAME", "speedymarket_php_cookie3");
+define("_COOKIE_NAME", "speedymarket_php6");
 //Variable de durée de validitée du cookie
 define("_COOKIE_TIME", time() + 60 * 60 * 24 * 7); //ici 1 semaine ou 604 800 secondes
 
