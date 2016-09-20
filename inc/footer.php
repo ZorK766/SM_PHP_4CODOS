@@ -49,6 +49,7 @@
         <script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
         <script src="js/vegas/vegas.min.js"></script>
         <script src="js/scripts.js" type="text/javascript"></script>
+        <script src="js/ajax_panier_Jquery.js" type="text/javascript"></script>
     </body>
 
 </html>
