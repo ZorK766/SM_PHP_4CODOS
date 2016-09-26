@@ -96,12 +96,12 @@ class CommandeManager {
      */
     public static function deleteCart() {
         
-       $userToken = htmlspecialchars($_COOKIE[_COOKIE_NAME]);
+        $userToken = htmlspecialchars($_COOKIE[_COOKIE_NAME]);
 
         $pdo = Dbconnect::getInstance();
-        $pdo->exec("DELETE FROM contenir WHERE codeC ='$userToken'"); 
+        $pdo->exec("DELETE * FROM tb_contenir WHERE codeC = '$userToken'");
         
-        //echo "Panier éffacé";
+        echo "Panier éffacé";
        
     }
 
