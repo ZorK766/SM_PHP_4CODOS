@@ -175,7 +175,7 @@ class ArticleManager {
                         <form method='post' action='#' class='add_cart' id='add_cart_$codeA'>
                         <input type='hidden' id='codeA' name='codeA' value='$codeA'>
                             <label for='qte' class='qte'>Quantité</label>
-                            <select name='qte' id='qte' class='quantite'>";
+                            <select name='qte' id='qte_$codeA' class='quantite'>";
         
                               /*Boucle pour afficher la quantitee en stock dans le menu deroulant de la quantite */        
                                 for ($i=1; $i <=$stock; $i++) {
@@ -202,3 +202,5 @@ class ArticleManager {
     }
 
 }
+
+

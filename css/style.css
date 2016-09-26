@@ -336,7 +336,7 @@ header {
 #panier {
     width: 400px;
     height: 70px;
-    background-color: #ff0;
+    /*background-color: #ff0;*/
     position: fixed;
     right: -330px;
     top: 166px;
@@ -353,6 +353,7 @@ header {
 #panier_content {
     width: 300px;
     height: auto;
+    min_height : 70px;
     background-color: #f7f7f7;
     float: left;
     color: #070707;
