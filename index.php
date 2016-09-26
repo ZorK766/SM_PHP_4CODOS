@@ -1,7 +1,7 @@
 <?php 
 if(isset($_POST['article_ajax_requete']))
 {
-    echo"test";
+    echo $_POST['article_ajax_requete'];
 }
 else
 {
