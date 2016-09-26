@@ -73,6 +73,14 @@ require_once 'inc/header.php';
             }
             
             
+            //Si vider la panier
+            if (isset($_GET['effacerpanier'])) {
+                if ($_GET['effacerpanier']==1) {
+                    CommandeManager::deleteCart();
+                }
+            }
+            
+            
            
             /* Si l'utilisateur à cliqué sur une catégorie on recuperere tous les articles de cette catégorie sous forme d'objet */
             if (isset($_GET['cat'])) {

@@ -1,6 +1,6 @@
 <?php require_once 'config.php'; ?>  
 
-<?php ob_start()?>
+<?php ob_start() ?>
 
 <!DOCTYPE html>
 <html lang="">
@@ -55,24 +55,24 @@
                 <span id="slogan">Les meilleurs produits locaux,<br/>du producteur à votre coffre</span>
             </div>
 
-            
+
             <div class ="col-lg-2 col-lg-offset-1 connect">
                 <form method="post" action="#">
                     <div class ='row'>
-                    <label for="login" class='login'>Indentifiant</label>
-                    <input type='text' name='login' id='login' class='login_input'>
+                        <label for="login" class='login'>Indentifiant</label>
+                        <input type='text' name='login' id='login' class='login_input'>
                     </div>
                     <div class ='row'>
-                    <label for='password' class='password'>Mot de passe</label>
-                    <input type='password' id='password' name='password' class='login_password'>
+                        <label for='password' class='password'>Mot de passe</label>
+                        <input type='password' id='password' name='password' class='login_password'>
                     </div>
                     <div class ='row'>
                     <a href="#" class='register'><!--<img src="img/header_icon_register.png" alt="register"/><br/>-->Inscription</a>
-                    <input type='submit' value='Se connecter' class='login_submit'>
+                        <input type='submit' value='Se connecter' class='login_submit'>
                     </div>
                 </form>
             </div>
-            
+
             <!--
             <div class="col-lg-1 header_icons">
                 <img src="img/header_icon_search.png" alt="search"/><br>Rechercher
@@ -144,7 +144,9 @@
         <!-- La div Panier -->
         <div id="panier">
             <div id="panier_ico" class="show2"><img src="img/header_icon_cart.png">Panier</div>
-            <div id="panier_content"><?php CommandeManager::getpanier(); ?></div>
+            <div id="panier_content"><?php CommandeManager::getpanier(); ?>
+                <a href="#?effacerpanier=1">Vider le panier</a>
+            </div>
         </div>
 
 
