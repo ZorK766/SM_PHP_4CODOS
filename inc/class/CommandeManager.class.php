@@ -111,6 +111,7 @@ class CommandeManager {
 
         $token = $_COOKIE[_COOKIE_NAME];
         $prixTotalPanier =0;
+        $nbArticlesPanier =0;
         $pdo = Dbconnect::getInstance();
 
         //On recherche toutes les entrees de la tgable contenir corespondant au Cookie de l'utilisateur
@@ -135,11 +136,12 @@ class CommandeManager {
             $prixArticleTTC = ($qte * $prixHTArticle)*_TVA_20;
             
             $prixTotalPanier += $prixArticleTTC;
+            $nbArticlesPanier += $qte;
             
             echo "<div class='ligne_Panier'>$qte x $nomArticle</div><div class='prix_ligne_panier'>$prixArticleTTC &#8364;</div><br/>";
         }
         
-        echo "<div class='prix_total_panier'>Total TTC: $prixTotalPanier &#8364;</div>";
+        echo "<div class='prix_total_panier'>Total: $nbArticlesPanier Articles, $prixTotalPanier &#8364; TTC</div>";
         
    
 
