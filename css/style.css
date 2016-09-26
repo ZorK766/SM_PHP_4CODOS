@@ -334,11 +334,11 @@ header {
 }*/
 
 #panier {
-    width: 300px;
+    width: 400px;
     height: 70px;
     background-color: #ff0;
     position: fixed;
-    right: -230px;
+    right: -330px;
     top: 166px;
     z-index: 2000;
 }
@@ -351,12 +351,21 @@ header {
     text-align: center;
 }
 #panier_content {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: auto;
     background-color: #f7f7f7;
     float: left;
     color: #070707;
     text-align: center;
+}
+
+.ligne_Panier {
+    float: left;
+}
+
+.prix_ligne_panier {
+    float: right;
+    margin-right: 50px;
 }
 
 

@@ -110,9 +110,40 @@ class CommandeManager {
     public static function getPanier() {
 
         $token = $_COOKIE[_COOKIE_NAME];
+        $prixTotalPanier =0;
         $pdo = Dbconnect::getInstance();
-        $q = $pdo->query("SELECT * contenir WHERE codeC = $token");
-        $q->execute();
+
+        //On recherche toutes les entrees de la tgable contenir corespondant au Cookie de l'utilisateur
+        $q = $pdo->query("SELECT * FROM contenir WHERE codeC='$token'");
+
+
+        while ($r = $q->fetch(PDO::FETCH_ASSOC)) {
+            
+            $codeArticle = $r['codeA'];
+            $qte = $r['qte'];
+
+            //On va chercher le libelle et le prix corespondant à codeA dans la table Article
+            $q2 = $pdo->query("SELECT * FROM tb_article WHERE codeA='$codeArticle'");
+            $r2 = $q2->fetch(PDO::FETCH_ASSOC);
+            
+            $nomArticle = $r2['libelleA'];
+            $prixHTArticle = $r2['prixhtA'];
+            
+            //On créé les objets articles correspondants
+            $articles[] = new Article($r2);
+            
+            $prixArticleTTC = ($qte * $prixHTArticle)*_TVA_20;
+            
+            $prixTotalPanier += $prixArticleTTC;
+            
+            echo "<div class='ligne_Panier'>$qte x $nomArticle</div><div class='prix_ligne_panier'>$prixArticleTTC &#8364;</div><br/>";
+        }
+        
+        echo "<div class='prix_total_panier'>Total TTC: $prixTotalPanier &#8364;</div>";
+        
+   
+
+
         $q->closeCursor();
     }
 

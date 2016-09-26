@@ -35,7 +35,7 @@
 
     </head>
 
-    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+    <! ---------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <body>
 
@@ -143,8 +143,8 @@
 
         <!-- La div Panier -->
         <div id="panier">
-            <div id="panier_ico" class="show2"><img src="img/header_icon_cart.png">Panier</div>
-            <div id="panier_content"><?php CommandeManager::getpanier(); ?></div>
+            <div id="panier_ico" class="show2"><img src="img/header_icon_cart.png">Mon Panier</div>
+            <div id="panier_content">5 Articles<br/>5,30€</div>
         </div>
 
 

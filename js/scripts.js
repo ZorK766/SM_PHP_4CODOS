@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
                 $(this).removeClass('show2').addClass('hide2');
             } else {
                 $("#panier").animate({
-                    right: "-230px"
+                    right: "-330px"
                 }, 500, function () {
                     // Animation complete.
                 });
