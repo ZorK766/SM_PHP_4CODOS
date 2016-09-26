@@ -145,6 +145,7 @@
         <div id="panier">
             <div id="panier_ico" class="show2"><img src="img/header_icon_cart.png">Panier</div>
             <div id="panier_content"><?php CommandeManager::getpanier(); ?></div>
+            <a href="#?deleteCart=1">Vider le panier</a>
         </div>
 
 
