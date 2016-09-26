@@ -172,7 +172,7 @@ class ArticleManager {
                     <div class='col-lg-4 tal'>             
                         <img class='panier' src='img/panier.png' alt=''/>
                         <div class='price'>Prix Unitaire: $prixTtc €</div>
-                        <form method='post' action='#' class='add_cart'>
+                        <form method='post' action='#' class='add_cart' id='add_cart_$codeA'>
                         <input type='hidden' id='codeA' name='codeA' value='$codeA'>
                             <label for='qte' class='qte'>Quantité</label>
                             <select name='qte' id='qte' class='quantite'>";

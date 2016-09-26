@@ -90,16 +90,19 @@ class CommandeManager {
     }
 
     /**
-     * Function permettant l'effacement d'une commande
-     * @param Commande $Commande
-     * @note non Testée
+     * Function permettant l'effacement du panier
+     * 
      * @author TGC
      */
-    public function delete(Commande $Commande) {
+    public static function deleteCart() {
+        
+        $userToken = htmlspecialchars($_COOKIE[_COOKIE_NAME]);
 
         $pdo = Dbconnect::getInstance();
-
-        $pdo->exec('DELETE FROM tb_commande WHERE codeC = ' . $Commande->codeC());
+        $pdo->exec("DELETE * FROM tb_contenir WHERE codeC = '$userToken'");
+        
+        echo "Panier éffacé";
+       
     }
 
     /**
@@ -142,6 +145,7 @@ class CommandeManager {
         }
         
         echo "<div class='prix_total_panier'>Total: $nbArticlesPanier Articles, $prixTotalPanier &#8364; TTC</div>";
+       
         
    
 
