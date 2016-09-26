@@ -5,8 +5,8 @@ $http = "http://localhost:8080/SM_PHP_4CODOS/";
 
 //Variables de la base de données
 define("_DB_HOST", "localhost");
-define("_DB_USER", "speedymarket_php");
-define("_DB_PASS", "toto");
+define("_DB_USER", "root");
+define("_DB_PASS", "");
 define("_DB_NAME", "speedymarket_php");
 
 //Variable de nom du cookie

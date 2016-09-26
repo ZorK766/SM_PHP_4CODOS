@@ -1,5 +1,13 @@
-<?php require_once 'inc/header.php'; ?>  
+<?php 
+if(isset($_POST['article_ajax_requete']))
+{
+    echo"test";
+}
+else
+{
+require_once 'inc/header.php'; 
 
+?>  
 
 <div id="wrapper">
 
@@ -94,4 +102,6 @@
 </div>  <!-- Fin du wrapper -->
 
 
-<?php require_once 'inc/footer.php';  
+<?php
+require_once 'inc/footer.php'; 
+}
