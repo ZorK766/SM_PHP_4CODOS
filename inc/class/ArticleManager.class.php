@@ -76,7 +76,7 @@ class ArticleManager {
 
         $articles = [];
 
-        $q = $pdo->query('SELECT codeA, libelleA, descriptionA, qtestockA, prixhtA, photoA, label, code FROM tb_article ORDER BY libelleA LIMIT 20');
+        $q = $pdo->query('SELECT codeA, libelleA, descriptionA, qtestockA, prixhtA, photoA, label, code FROM tb_article ORDER BY libelleA LIMIT 50');
 
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             $articles[] = new Article($donnees);

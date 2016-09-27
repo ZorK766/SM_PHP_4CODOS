@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 27 Septembre 2016 à 12:44
+-- Généré le :  Mar 27 Septembre 2016 à 15:20
 -- Version du serveur :  5.7.9
 -- Version de PHP :  5.6.16
 
@@ -200,12 +200,15 @@ CREATE TABLE IF NOT EXISTS `contenir` (
 --
 
 INSERT INTO `contenir` (`qte`, `codeA`, `codeC`) VALUES
-(1, 'BOISSO_ALC_010', 'dd034ea0cae5ef1ff46dd70a7f955d49'),
+(2, 'BOISSO_ALC_010', 'dd034ea0cae5ef1ff46dd70a7f955d49'),
+(4, 'CONBOC_BOC_001', '05eb7a3b6171abe3a07ec0c3afa3a73e'),
 (6, 'CONBOC_BOC_001', '22a24c57890142361dce04441dccca64'),
+(2, 'CONBOC_BOC_003', '05eb7a3b6171abe3a07ec0c3afa3a73e'),
 (6, 'CONBOC_BOC_003', '22a24c57890142361dce04441dccca64'),
 (39, 'CONBOC_BOC_004', '22a24c57890142361dce04441dccca64'),
+(6, 'CONBOC_BOC_009', '05eb7a3b6171abe3a07ec0c3afa3a73e'),
 (4, 'CONBOC_BOC_009', '22a24c57890142361dce04441dccca64'),
-(5, 'FRULEG_FRU_002', 'dd034ea0cae5ef1ff46dd70a7f955d49'),
+(6, 'FRULEG_FRU_002', 'dd034ea0cae5ef1ff46dd70a7f955d49'),
 (4, 'FRULEG_LEG_012', 'dd034ea0cae5ef1ff46dd70a7f955d49'),
 (2, 'VIAPOI_VIA_001', 'dd034ea0cae5ef1ff46dd70a7f955d49');
 
@@ -311,7 +314,7 @@ INSERT INTO `tb_article` (`codeA`, `libelleA`, `descriptionA`, `qtestockA`, `pri
 ('CONBOC_BOC_015', 'Caldeirada en conserve', 'Poisson légumes et épices', 30, 6, NULL, 'non-bio', NULL),
 ('CONBOC_CON_001', 'Cœurs d''artichauds', NULL, 50, 3, NULL, 'Bio', NULL),
 ('CONBOC_CON_002', 'Ratatouille', NULL, 50, 3, NULL, 'Non bio', NULL),
-('CONBOC_CON_003', 'Aubergines', NULL, 50, 3, 'aubergine.png', 'Bio', NULL),
+('CONBOC_CON_003', 'Aubergines', NULL, 50, 3, '', 'Bio', NULL),
 ('CONBOC_CON_004', 'Terrines aux cèpes', NULL, 50, 3, NULL, 'Non bio', NULL),
 ('CONBOC_CON_005', 'Raviolis', NULL, 50, 3, NULL, 'Bio', NULL),
 ('CONBOC_CON_006', 'Flageolets', NULL, 50, 3, NULL, 'Non bio', NULL),
@@ -460,6 +463,7 @@ CREATE TABLE IF NOT EXISTS `tb_commande` (
 --
 
 INSERT INTO `tb_commande` (`codeC`, `dateC`, `statutC`, `dateretraitC`, `heureretraitC`, `code`) VALUES
+('05eb7a3b6171abe3a07ec0c3afa3a73e', '2016-09-27 13:21:33', NULL, NULL, NULL, NULL),
 ('22a24c57890142361dce04441dccca64', '2016-09-27 12:25:41', NULL, NULL, NULL, NULL),
 ('dd034ea0cae5ef1ff46dd70a7f955d49', '2016-09-27 12:38:18', NULL, NULL, NULL, NULL);
 
