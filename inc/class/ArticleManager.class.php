@@ -172,10 +172,10 @@ class ArticleManager {
                     <div class='col-lg-4 tal'>             
                         <img class='panier' src='img/panier.png' alt=''/>
                         <div class='price'>Prix Unitaire: $prixTtc €</div>
-                        <form method='post' action='#' class='add_cart' id='$codeA'>
+                        <form method='post' action='#' class='add_cart'  name='$codeA'>
                         <input type='hidden' id='codeA' name='codeA' value='$codeA'>
                             <label for='qte' class='qte'>Quantité</label>
-                            <select name='qte' id='qte' class='quantite'>";
+                            <select name='qte' id='qte_$codeA' class='quantite'>";
         
                               /*Boucle pour afficher la quantitee en stock dans le menu deroulant de la quantite */        
                                 for ($i=1; $i <=$stock; $i++) {
@@ -184,7 +184,7 @@ class ArticleManager {
                                 
                                 echo "
                             </select>
-                            <button type='submit' class='ajouter_panier'>Ajouter au panier</button>
+                            <button type='submit' class='ajouter_panier' id='$codeA'>Ajouter au panier</button>
                         </form>
                        <!-- <div class='origine'>Origine: Sault de Navailles</div>-->
                     </div>

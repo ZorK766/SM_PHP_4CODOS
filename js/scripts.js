@@ -32,8 +32,51 @@ $("#homeslider, body").vegas({
 
 
 
-
+//Scripts a charger avec la page
 jQuery(document).ready(function ($) {
+
+//Functions Ajax pour l'ajout de produits dynamique
+//detection du clic sur le formulaire add_cart
+    $(".ajouter_panier").click(function (e) {
+
+        e.preventDefault();
+        //recupération des id qte et id_articles
+
+        //récupère l'article cliqué
+        var $id = $(this);
+        //récupère son id article
+        var id_article = $id.attr("id");
+        // recupère la valeur de l'id qte concatené suivant la valeur de l'id article
+        var qte = $("#qte_" + id_article + " option:selected").val();
+        console.log(id_article);
+        console.log(qte);
+        //
+        $.post(
+                'panier.ajax.php', // Le fichier cible côté serveur.
+                {
+                    Sujet: id_article, // Nous supposons que ce formulaire existe dans le DOM.
+                    codeA: id_article,
+                    qte: qte
+                },
+                'nom_fonction_retour', // Nous renseignons uniquement le nom de la fonction de retour.
+                'html' // Format des données reçues.
+                )
+                .done(function (data) {
+
+                    $('#panier_content').html(data);
+                    opencart();
+                }).fail(function () {
+//alert("error");
+        })
+                .always(function () {
+                    //alert("finished");
+                });
+        //Function pour l'affichage dynamique du panier
+        function nom_fonction_retour(texte_recu) {
+            // Du code pour gérer le retour de l'appel AJAX.
+
+        }
+    });
 // Effet de Hover sur une image
     $(function () {
         $('#menu img').hover(function () {
@@ -43,29 +86,8 @@ jQuery(document).ready(function ($) {
             this.src = 'images/icon_03.png';
         });
     });
-    // Fenêtre panier qui s'ouvre
-    $(function () {
-        $('#panier_ico').click(function () {
-            if ($(this).hasClass('show2')) {
-                $("#panier").animate({
-                    right: "-68px"
-                }, 500, function () {
-                    // Animation complete.
-                });
-                $(this).removeClass('show2').addClass('hide2');
-            } else {
-                $("#panier").animate({
-                    right: "-330px"
-                }, 500, function () {
-                    // Animation complete.
-                });
-                $(this).removeClass('hide2').addClass('show2');
-            }
-
-        });
 
 
-    });
     // Smooth scroll
     $(function () {
         $('#fleche').click(function () {
@@ -88,8 +110,6 @@ jQuery(document).ready(function ($) {
             });
         });
     });
-
-
     $(window).scroll(function () {
         posScroll = $(document).scrollTop();
         if ((posScroll >= 600) && (posScroll !== 0))
@@ -97,10 +117,7 @@ jQuery(document).ready(function ($) {
         else
             $('.menu_scroll').fadeOut(600);
     });
-
-
 });
-
 //Function pour offir un scrolling doux lors du clic sur un lien pointant sur une ancre
 var $smoothScrollTime = 500; //Le temps de l'animation en ms
 $(function () {
@@ -119,11 +136,47 @@ $(function () {
 });
 
 
-/*$(window).bind('scroll', function () {
- var menu = $('header');
- if ($(window).scrollTop() > menu.offset().top) {
- menu.addClass('fixed');
- } else {
- menu.removeClass('fixed');
- }
- });*/
+
+
+
+//Panier qui s'ouvre au clic
+$(function () {
+    $('#panier_ico').click(function () {
+        var cart = $('#panier_ico');
+        if (cart.hasClass('show2')) {
+            $("#panier").animate({
+                right: "-68px"
+            }, 500, function () {
+                // Animation complete.
+            });
+            cart.removeClass('show2').addClass('hide2');
+        } else {
+            $("#panier").animate({
+                right: "-330px"
+            }, 500, function () {
+
+            });
+            cart.removeClass('hide2').addClass('show2');
+        }
+    });
+});
+
+// Fenêtre panier qui s'ouvre
+function opencart() {
+    var cart = $('#panier_ico');
+   
+        $("#panier").animate({
+            right: "-68px"
+        }, 500, function () {
+            // Animation complete.
+        });
+        cart.removeClass('show2').addClass('hide2');
+  
+}
+;
+
+
+
+
+
+

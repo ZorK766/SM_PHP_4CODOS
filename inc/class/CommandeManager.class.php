@@ -61,7 +61,7 @@ class CommandeManager {
 
         //Si il n'ya pas assez de stock, on informe l'utilisateur
         if ($quantiteeDemandee >= $r2['qtestockA']) {
-            echo "<h2>l n'y a pas assez de stock pour cet article</h2>";
+           ?><script>alert("Il n y a pas assez de stock pour cet article");</script><?php
         }
 
         //Si l'article n'existait pas déjà dans la commande, on l'ajoute dans la table contenir

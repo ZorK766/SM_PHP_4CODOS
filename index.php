@@ -73,7 +73,7 @@ require_once 'inc/header.php';
             }
             
             
-            //Si vider la panier
+            //Si vider le panier
             if (isset($_GET['effacerpanier'])) {
                 if ($_GET['effacerpanier']==1) {
                     CommandeManager::deleteCart();

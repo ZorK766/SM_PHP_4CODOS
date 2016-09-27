@@ -70,6 +70,8 @@ header {
 }
 
 #search_bar input {
+    font-family: 'Indie Flower', cursive;
+
     background: #fff none repeat scroll 0 0;
     height: 42px;
     font-size: 22px;
@@ -95,17 +97,18 @@ header {
 .login_input, .login_password {
     width: 90px;
     margin: 5px 0;
-    
+
 }
 
 
 
 .login_input, .login_password, .login, .password, .login_submit, .register {
- 
+
 }
 
 
 #slogan {
+    font-family: 'Indie Flower', cursive;
     position: relative;
     text-align: center;
     font-size: 30px;
@@ -120,7 +123,8 @@ header {
     position: fixed;
     width: 100%;
     height: 166px;
-    background-color: aqua;
+    background: #f0f0f0 url("../img/backgrounds/background_scroll.jpg") 0 0 no-repeat;
+    color: black;
     display: none;
     z-index: 100;
     padding-top: 30px;
@@ -343,6 +347,8 @@ header {
     z-index: 2000;
 }
 #panier_ico {
+    font-family: 'Indie Flower', cursive;
+
     width: 70px;
     height: 70px;
     background-color: green;
@@ -415,6 +421,7 @@ header {
 }
 
 .page_title, .page_title img, .page_title h2 {
+    font-family: 'Indie Flower', cursive;
     margin: auto;
     display: inline-block;
 }
@@ -425,6 +432,8 @@ header {
 }
 
 #produits ul li, .grid_list ul li {
+        font-family: 'Indie Flower', cursive;
+
     display: inline-block;
     list-style: none;
 }
@@ -477,7 +486,7 @@ article {
 }
 
 .price, .quantite {
-   font-size: 22px;
+    font-size: 22px;
 }
 
 /*.right_price {
@@ -506,7 +515,7 @@ article {
 }
 
 .photo_producteur {
-   /* float: right;*/
+    /* float: right;*/
 }
 
 .separator_produit {
