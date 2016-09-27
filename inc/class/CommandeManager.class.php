@@ -137,14 +137,18 @@ class CommandeManager {
             $articles[] = new Article($r2);
             
             $prixArticleTTC = ($qte * $prixHTArticle)*_TVA_20;
+            $prixArticleTTCFMT = formatPrice($prixArticleTTC);
+            
+           
             
             $prixTotalPanier += $prixArticleTTC;
+            $prixTotalPanierFMT = formatPrice($prixArticleTTC);
             $nbArticlesPanier += $qte;
             
-            echo "<div class='ligne_Panier'>$qte x $nomArticle</div><div class='prix_ligne_panier'>$prixArticleTTC &#8364;</div><br/>";
+            echo "<div class='ligne_Panier'>$qte x $nomArticle</div><div class='prix_ligne_panier'>$prixArticleTTCFMT &#8364;</div><br/>";
         }
         
-        echo "<div class='prix_total_panier'>Total: $nbArticlesPanier Articles, $prixTotalPanier &#8364; TTC</div>";
+        echo "<div class='prix_total_panier'>Total: $nbArticlesPanier Articles, $prixTotalPanierFMT &#8364; TTC</div>";
        
         
    

@@ -36,7 +36,9 @@ function conversionHT() {
 // Fonction qui formate le prix en Euros avec la virgule et mettre 2 chiffres après la virgule ex 4.3 -> 4€30
 function formatPrice($number) {
     
-    $fmt = numfmt_create( 'fr_FR', NumberFormatter::CURRENCY );
+    //$fmt = numfmt_create( 'fr_FR', NumberFormatter::CURRENCY );
+    
+   $fmt = number_format($number, 2, ',', ' ');
        
     return $fmt;
 	

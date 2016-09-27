@@ -53,7 +53,6 @@ header {
 }
 
 #logo {
-
     margin-left: 0;
 }
 
@@ -71,7 +70,6 @@ header {
 
 #search_bar input {
     font-family: 'Indie Flower', cursive;
-
     background: #fff none repeat scroll 0 0;
     height: 42px;
     font-size: 22px;
@@ -79,15 +77,17 @@ header {
 
 }
 
-/*Styles du panneau de conenction*/
+/*Styles du panneau de connection*/
 
 .connect {
-    background-color: white;
+    background: #f0f0f0 url("../img/pw_pattern.png") 0 0 repeat;
     height: 150px;
     border-radius: 0 0 10px 10px;
     color: black;
     margin-top: -30px;
     text-align: center;
+
+
 }
 
 .connect a {
@@ -96,8 +96,7 @@ header {
 
 .login_input, .login_password {
     width: 90px;
-    margin: 5px 0;
-
+    margin: 5px 0; 
 }
 
 
@@ -119,7 +118,7 @@ header {
 
 
 .menu_scroll {
-    text-align: center;
+    /*text-align: center;*/
     position: fixed;
     width: 100%;
     height: 166px;
@@ -340,7 +339,7 @@ header {
 #panier {
     width: 400px;
     height: 70px;
-    background-color: #ff0;
+    background: #f7f7f7 url("../img/pw_pattern.png") 0 0 repeat;
     position: fixed;
     right: -330px;
     top: 166px;
@@ -359,10 +358,11 @@ header {
 #panier_content {
     width: 300px;
     height: auto;
-    background-color: #f7f7f7;
+    background: #f7f7f7 url("../img/pw_pattern.png") 0 0 repeat;
     float: left;
     color: #070707;
     text-align: center;
+    padding: 5px;
 }
 
 .ligne_Panier {
@@ -432,7 +432,7 @@ header {
 }
 
 #produits ul li, .grid_list ul li {
-        font-family: 'Indie Flower', cursive;
+    font-family: 'Indie Flower', cursive;
 
     display: inline-block;
     list-style: none;
@@ -528,6 +528,7 @@ article {
 
 footer {
     position: relative;
+    font-family: 'Indie Flower', cursive;
     background: #f7f7f7 url("../img/dark_embroidery_pattern.png")0 0 repeat scroll;
     height: 520px;
     width: 100%;

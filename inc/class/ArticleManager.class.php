@@ -154,9 +154,17 @@ class ArticleManager {
       private '_code' => null*/
         
         $prixTtc = (($article->prixhtA()) * _TVA_20);
+        $prixFormat = formatPrice($prixTtc);
         $nomArticle = $article->libelleA();
         $stock = $article->qtestockA();
         $codeA = $article->codeA();
+        $photoA = $article->photoA();
+        
+        //Temporairement, on créé un random pour afficher un producteur different
+        $rand = rand(1 , 5);
+        
+        //Si il n'y a pas de photo, on affiche pas l'article
+        if (!null == $photoA) {
         
         //var_dump($article);
 
@@ -165,13 +173,13 @@ class ArticleManager {
                 <div class='row'>
                     <!-- PRODUIT PARTIE GAUCHE -->
                     <div class='col-lg-4 tal'>
-                        <img src='img/produits/kiwis.png' alt=''/>
+                        <img src='img/produits/$photoA' alt=''/>
                         <div class='nom_produit'>$nomArticle</div>
                     </div>
                     <!-- PRODUIT PARTIE CENTRALE -->
                     <div class='col-lg-4 tal'>             
                         <img class='panier' src='img/panier.png' alt=''/>
-                        <div class='price'>Prix Unitaire: $prixTtc €</div>
+                        <div class='price'>Prix Unitaire: $prixFormat €</div>
                         <form method='post' action='#' class='add_cart'  name='$codeA'>
                         <input type='hidden' id='codeA' name='codeA' value='$codeA'>
                             <label for='qte' class='qte'>Quantité</label>
@@ -190,13 +198,15 @@ class ArticleManager {
                     </div>
                     <!-- PRODUIT PARTIE DROITE -->
                     <div class='col-lg-4 tal'>
-                        <div class='photo_producteur'><img src='img/producteurs/producteur2.png' alt=''/></div>
+                        <div class='photo_producteur'><img src='img/producteurs/producteur$rand.png' alt=''/></div>
                         <div class='nom_producteur'>Nicolas B</div>
                     </div>
                 </div>
                <!-- <img class='separator_produit' src='img/separator_b.png' alt=''/>-->
             </article>
             <img class='separator_produit' src='img/shadow.png' alt=''/>";
+                                
+        }
         
        
     }
